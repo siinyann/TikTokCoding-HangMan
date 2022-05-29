@@ -1,13 +1,16 @@
 const wordE1 = document.getElementById('word');
 const wrongLettersE1 = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-button');
-const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 
 const figureParts= document.querySelectorAll(".figure-part");
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = ['society','population','comparison','property','random',
+                'observatory','committee','lyrics','smidgen','president',
+                'decipher','turret','rival','tattle','stranger',
+                'regret','galaxy','exhibition','vanquish','problem']
+;
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -33,8 +36,6 @@ function displayWord(){
 
     if(innerWord === selectedWord){
         window.location.href="winpage.html";
-        // finalMessage.innerText = 'Congratulations! You won! 😃';
-        // popup.style.display= 'flex';
     }
 }
 
@@ -61,8 +62,6 @@ function updateWrongLetterE1(){
     //Check if lost
     if(wrongLetters.length === figureParts.length){
         window.location.href="lostpage.html";
-        // finalMessage.innerText = 'Unfortunately you lost. 😕';
-        // popup.style.display = 'flex';
     }
 }
 
