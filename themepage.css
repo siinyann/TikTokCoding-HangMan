@@ -61,7 +61,7 @@ button {
   transition: all 0.3s ease;
 }
 .btn-1:hover {
-  color: #;
+  color: black;
 }
 .btn-1:hover:after {
   top: auto;
